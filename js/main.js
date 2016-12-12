@@ -4,9 +4,10 @@ let width = 1000;
 let height = 600;
 let padding = 60;
 
-let svg = d3.select("body").append("svg")
+let svg = d3.select("#barchart").append("svg")
 							.attr("width", width)
 							.attr("height", height+100);
+
 
 svg.append("rect")
 	.attr("x", 0)
@@ -43,7 +44,7 @@ function drawBarChart(dataJSON){
 
 	let yAxis = d3.axisLeft()
 					.scale(yScale);
-					
+
 	let bars = svg.selectAll("rect")
 					.data(data);
 
@@ -96,7 +97,7 @@ function drawBarChart(dataJSON){
 		.text(dataJSON.description)
 		.style("font-size", "0.8em")		
 		.style("top", `${height-20}px`)
-		.style("left", `${100}px`)
+		.style("left", "100px")
 		.style("width", `${width - width/4}px`)
 		.style("text-align", "center");
 		
@@ -112,9 +113,4 @@ function drawBarChart(dataJSON){
 			let x = width/2 - titleWidth/2;
 			return `translate(${x},50)`;
 		});
-
-
-
 }
-
-
