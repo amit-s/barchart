@@ -1,17 +1,37 @@
-rect:hover
-	fill: red
+$bar-hover-color: yellow
+$tooltip-background-color: yellow
+$tooltip-shadow-color: rgba(255,0,0,0.5)
+
+
+body
+	background: rgba(0,0,0,0.5)	
+
+/*.bars:hover
+	fill: red*/
+
+.bars:hover
+	fill: $bar-hover-color
+	
 
 .hidden
-	display: none	
+	display: none
 
 #tooltip
 	position: absolute
-	padding: 5px
-	background: rgba(162,192,217,1)
-	border-radius: 5%
+	background: $tooltip-background-color
+	border-radius: 10px
 	width: 120px
-	box-shadow: 5px 5px 10px rgba(0,0,0,0.1)
-	pointer-events: none
+	padding: 10px
+	box-shadow: 5px 5px 10px $tooltip-shadow-color
+	font-size: 0.8em
 
-#amount, #date
-	margin: 0	
+#tooltip p
+	margin: 0
+
+.axis text
+	font-size: 1.5em
+
+#description
+	position: absolute
+	
+

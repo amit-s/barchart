@@ -1,19 +1,30 @@
-rect:hover {
-  fill: red; }
+body {
+  background: rgba(0, 0, 0, 0.5); }
+
+/*.bars:hover
+ * fill: red */
+.bars:hover {
+  fill: yellow; }
 
 .hidden {
   display: none; }
 
 #tooltip {
   position: absolute;
-  padding: 5px;
-  background: #a2c0d9;
-  border-radius: 5%;
+  background: yellow;
+  border-radius: 10px;
   width: 120px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  pointer-events: none; }
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.5);
+  font-size: 0.8em; }
 
-#amount, #date {
+#tooltip p {
   margin: 0; }
+
+.axis text {
+  font-size: 1.5em; }
+
+#description {
+  position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
